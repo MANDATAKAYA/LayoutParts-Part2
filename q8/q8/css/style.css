@@ -1,2 +1,23 @@
 @charset "UTF-8";
-
+.img-repeat {
+  background-image: url(../../image/coffee-background.jpg);
+  height: 500px;
+}
+.img-norepeat {
+  background-image: url(../../image/coffee-background.jpg);
+  background-repeat: no-repeat;/*初期値treat、繰り返さない*/
+  height: 500px;
+}
+.img-center-repeat {
+  background-image: url(../../image/coffee-background.jpg);
+  background-position: center center;/*背景の位置を上下左右にする*/
+  background-size: cover;/*横幅いっぱいに*/
+  height: 500px;
+}
+.img-center {
+  background-image: url(../../image/coffee-background.jpg);
+  background-position: center center;
+  background-size: contain;/*幅高さを保つ*/
+  background-repeat: no-repeat;/*指定しないと繰り返される*/
+  height: 500px;
+}

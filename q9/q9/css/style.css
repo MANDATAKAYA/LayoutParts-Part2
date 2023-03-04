@@ -1,4 +1,138 @@
 @charset "UTF-8";
-
+.green-box {
+  background-color: #76ff826b;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+}
+.fadein {
+  animation-name: fadeInAnime;/*アニメーションの名前設定*/
+  animation-duration: 4s;/*アニメーション4秒*/
+  animation-delay: 0s;/*アニメーションの遅延*/
+  animation-fill-mode: forwards;/*@keyframe指定の100%表記にさせる*/
+}
+.fadeout {
+  animation-name: fadeOutAnime;/*アニメーションの名前設定*/
+  animation-duration: 4s;/*アニメーション4秒*/
+  animation-delay: 4s;/*アニメーションの遅延*/
+}
+.spin {
+  animation-name: SpinAnime;/*アニメーションの名前設定*/
+  animation-duration: 4s;/*アニメーション4秒*/
+  animation-direction: normal;/*無限設定の際に指定*/
+  animation-timing-function: linear;/*一定速度で変化*/
+  animation-iteration-count: infinite;/*無限に繰り返す*/
+}
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutAnime {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes SpinAnime {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.blue-box {
+  background-color: #331aefd0;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  transition-duration: 0.5s;/*0.5秒後にアニメーション開始*/
+}
+.change:hover {/*マウスがコンテナーに触れた時*/
+  background-color: #ff27e2c9;
+}
+.spins:hover {
+  transform: rotate(360deg);/*360度回転*/
+}
+.up:hover {
+  transform: translate(0%,-20%);/*X軸上、20%移動*/
+}
+.right:hover {
+  transform: translate(20%,0%);
+}
+.column:hover {
+  height: 300px;
+}
+.row:hover {
+  width: 500px;
+}
+.border {
+  box-sizing: border-box;/*要素の幅と高さにpadding、borderを含めない*/
+}
+.border:hover {
+  border: 10px #00ffe5 solid;
+}
+.shadow:hover {
+  box-shadow: 8px 11px 10px 3px #06031ed0;
+}
+.circle {
+  border-radius: 50%;/*丸くする*/
+  width: 50px;
+  height: 50px;
+  border: 10px #ecf1f2 solid;
+  margin: 0 auto;
+  border-top-color: #14ff4bcd;/*上部色指定*/
+  animation-name: spinner;
+  animation-duration: 1.1s;
+  animation-timing-function: linear;/*一定の速度でアニメーションが動く*/
+  animation-iteration-count: infinite;/*無限*/
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.img-list {
+  display: flex;
+}
+.list-img {
+  background-image: url(https://picsum.photos/id/1005/200/300);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;/*丸くする*/
+  margin: 0 auto;
+  background-size: cover;/*画像を横幅いっぱいに*/
+  background-position: center center;/*背景の位置上下左右中央*/
+}
+.list-text {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-left: 300px;
+  padding: 20px;
+}
+.list-text {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-left: 0px;
+  width: 300px;
+  padding: 20px;
+}
+.list-text:first-child {
+  border-left: 1px solid #000;
+}
+p {
+  margin-top: 20px;
+}
+.list-text:hover {
+  box-shadow: 0px 0px 10px 3px #424242d0;
+  z-index: 1;/*指定要素の表示が上になる*/
+  position: relative;/*位置指定*/
+}
 /* カード内の画像は以下のURLを使用して下さい */
 /* https://picsum.photos/id/1005/200/300 */

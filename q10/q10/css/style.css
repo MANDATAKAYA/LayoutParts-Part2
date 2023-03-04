@@ -1,1 +1,68 @@
 @charset "UTF-8";
+.btn-flex {
+  display: flex;
+  justify-content: center;/*主軸中央*/
+}
+.btn {
+  padding: 0 15px;
+  line-height: 50px;
+  border-radius: 10px;/*角丸 半径10px*/
+  margin-left: 30px;
+  cursor: pointer;/*カーソルを合わせた時に矢印になる*/
+}
+.btn:first-child {
+  margin-left: 0px;
+}
+.red-btn {
+  background-color: #fd0f0fd9;
+  color: #fff;
+}
+.blue-btn {
+  background-color: #170ffdd9;
+  color: #fff;
+}
+.green-btn {
+  background-color: #0ffd0fd9;
+  color: #000;
+}
+.shadow-red-btn {
+background-color: #fd0f0fd9;
+color: #fff;
+box-shadow: 0 0.3em 0 rgba(63,5,5,0.851),0 0.3em 0 rgba(63,5,5,0.851);/*重ねて影をかける*/
+}
+.shadow-blue-btn {
+  background-color: #170ffdd9;
+  color: #fff;
+  box-shadow: 0 0.3em 0 rgba(5,13,63,0.851),0 0.3em 0 rgba(5,13,63,0.851);/*重ねて影をかける*/
+}
+.shadow-green-btn {
+  background-color: #0ffd0fd9;
+  box-shadow: 0 0.3em 0 rgba(5,63,5,0.851),0 0.3em 0 rgba(5,63,5,0.851);/*重ねて影をかける*/
+}
+.active:active {
+  box-shadow: none;/*押したときに影が消えるようにする*/
+  transform: translateY(0.3em);/*Y軸方向に0.3em移動する。押すと影が消えるように。*/
+}
+.left-btn {
+  color: #67c5ff;
+  border: 4px double #67c5ff;
+}
+.center-btn {
+  color: #67c5ff;
+  border: 4px dotted #75caff;/*点線*/
+}
+.right-btn {
+  color: #0079a5f8;
+  background-color: #d0edfff8;
+  border: 4px dashed #67c5ff;/*破線*/
+}
+.left-btn:hover {/*カーソルを合わせた時*/
+  background-color: #fffbef;
+}
+.center-btn:hover {
+  border: 4px dashed #67c5ff;
+}
+.right-btn:hover {
+  color: #67c5ff;
+  background-color: #fff;
+}

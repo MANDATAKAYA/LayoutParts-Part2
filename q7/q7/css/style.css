@@ -1,1 +1,29 @@
 @charset "UTF-8";
+.text-block {
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: #fad296;
+  border: solid 5px #8f5a0a;
+  border-radius: 31px;
+  width: 500px;
+  position: relative;
+}
+.text-block :before {/*矢印枠線部分*/
+  content: "";/*テキストなし*/
+  border: 20px solid transparent;/*透明にする。ボーダーの方向に色指定で全体的に例のように吹き出し色が変わる*/
+  border-top: 20px solid #8f5a0a;/*色指定。上記で透明にしているので、指定色に吹き出しが変わる*/
+  position: absolute;/*吹き出しの位置の指定*/
+  bottom: -45px;/*値0より下*/
+  left: 30px;
+  position: absolute;
+}
+.text-block :after {
+  content: "";
+  border: 20px solid transparent;/*透明にする*/
+  border-top: 20px solid #fad296;
+  position: absolute;
+  bottom: -38px;/*値を0により下*/
+  left: 30px;
+}
