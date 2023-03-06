@@ -14,7 +14,6 @@
   content: "";/*テキストなし*/
   border: 20px solid transparent;/*透明にする。ボーダーの方向に色指定で全体的に例のように吹き出し色が変わる*/
   left: 32px;
-  position: absolute;
   position: absolute;/*吹き出しの位置の指定*/
 }
 .text-block :before {/*矢印枠線部分*/
